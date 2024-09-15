@@ -2,11 +2,13 @@ import os
 import re
 import aiofiles
 import aiohttp
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps
 from unidecode import unidecode
 from youtubesearchpython.__future__ import VideosSearch
 from AnieXEricaMusic import app
 from config import YOUTUBE_IMG_URL
+from AnieXEricaMusic.PIL import ImageFont
+
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
