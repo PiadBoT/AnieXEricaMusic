@@ -192,7 +192,7 @@ Here Is Admins Pannels cmds
 <code>/broadcast</code> = broadcast Your Messege to groups
 <code>/broadcast -user -pin -nobot -pinloud -assistant</code> Your Messege
 """
-HELP_17 = """
+HELP_18 = """
 Here Is UseFull Tools :
 
 
