@@ -32,7 +32,7 @@ async def admis(client, message: Message, _):
 
     if sudo_users_info:
         sudo_users_list = "\n".join(sudo_users_info)
-        response_message = f"The following users are admins:\n{sudo_users_list}"
+        response_message = f"Found The Bot Admins Are Here :\n{sudo_users_list}"
     else:
-        response_message = "No admins found."
+        response_message = "No Admins Found In Bot Admins."
     await message.reply_text(response_message)
