@@ -163,5 +163,32 @@ Nᴏᴛᴇ : Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ᴜsᴇ ᴛʜᴇ A�
 """
 
 HELP_17 = """
-Soon....
+Here Is Admins Pannels cmds
+
+<code>/setpfp</code> = set assis dp
+<code>/delpfp</code> = delete assis dp
+<code>/setbio</code> = set assis bio
+<code>/setname</code> = set assis name
+<code>/autoend</code> = <code>/enable</code> / <code>/disable</code>
+<code>/blacklistchat</code> = Chat_id
+<code>/whitelistchat</code> = Chat_id
+<code>/blacklistedchats</code> = Get blacklistedchats lists
+<code>/block</code> = block users
+<code>/unblock</code> = unblock users
+<code>/blockedusers</code> = get blockedusers
+<code>/clearcache</code> = vps clean
+<code>/gban</code> = gl ban 
+<code>/ungban</code> = gl unban
+<code>/gbanlist</code> =  gl banlist
+<code>/link</code> = group_id get Link
+<code>/logger</code> = <code>/enable</code> / <code>/disable</code>
+<code>/maintenance</code> = <code>/enable</code> / <code>/disable</code> 
+<code>/logs</code> = get bot logs
+<code>/update</code> = update bot
+<code>/restart</code> = restart bot
+<code>/addsudo</code> = add admins list
+<code>/delsudo</code> = delete admin list
+<code>/sudolist</code> = get all admins of bot
+<code>/broadcast</code> = broadcast Your Messege to groups
+<code>/broadcast -user -pin -nobot -pinloud -assistant</code> Your Messege
 """
