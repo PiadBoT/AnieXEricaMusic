@@ -26,3 +26,4 @@ youtube-search
 youtube-search-python
 telegraph
 gpytranslate
+git+https://github.com/Vivekkumar-IN/TheApi@main
