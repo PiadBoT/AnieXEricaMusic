@@ -4,7 +4,12 @@ from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 from strings import get_string
 from AnieXEricaMusic import app
-
+from pyrogram.types import Message
+from AnieXEricaMusic.misc import SUDOERS
+from AnieXEricaMusic.utils import get_readable_time
+from AnieXEricaMusic.utils.decorators.language import language
+from AnieXEricaMusic.utils.extraction import extract_user
+from config import BANNED_USERS
 
 SPAM_CHATS = []
 
@@ -24,6 +29,7 @@ async def is_admin(chat_id, user_id):
 @app.on_message(
     filters.command(["all", "allmention", "mentionall", "tagall"], prefixes=["/", "@"])
 )
+@language
 async def tag_all_users(_, message):
     admin = await is_admin(message.chat.id, message.from_user.id)
     if not admin:
@@ -186,6 +192,7 @@ async def tag_all_admins(_, message):
 @app.on_message(
     filters.command(["admin", "admins", "report"], prefixes=["/", "@"]) & filters.group
 )
+@language
 async def admintag_with_reporting(client, message):
     if not message.from_user:
         return
@@ -243,6 +250,7 @@ async def admintag_with_reporting(client, message):
         prefixes=["/", "@"],
     )
 )
+@language
 async def cancelcmd(_, message):
     chat_id = message.chat.id
     admin = await is_admin(chat_id, message.from_user.id)
