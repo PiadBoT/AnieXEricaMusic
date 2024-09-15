@@ -16,7 +16,7 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://IYIusic:P8QtOotbu7QrXVNI@iy
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 
-LOGGER_ID = int(getenv("LOGGER_ID",-1002329849003))
+LOGGER_ID = int(getenv("LOGGER_ID",-1002092475236))
 
 OWNER_ID = int(getenv("OWNER_ID", 5810668543))
 
