@@ -1,5 +1,5 @@
 from typing import Union
-
+from AnieXEricaMusic.misc import SUDOERS
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
@@ -90,3 +90,8 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(helpers.HELP_15, reply_markup=keyboard)
     elif cb == "hb16":
         await CallbackQuery.edit_message_text(helpers.HELP_16, reply_markup=keyboard)
+    elif cb == "hb17":
+        if CallbackQuery.from_user.id not in SUDOERS:
+            await CallbackQuery.answer("You do not have permission to access this feature.")
+            return
+        await CallbackQuery.edit_message_text(helpers.HELP_17, reply_markup=keyboard)
