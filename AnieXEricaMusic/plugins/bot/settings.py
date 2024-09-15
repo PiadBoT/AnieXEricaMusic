@@ -7,7 +7,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     Message,
 )
-
+from AnieXEricaMusic.utils.database import get_served_chats, get_served_users, get_sudoers
 from AnieXEricaMusic import app
 from AnieXEricaMusic.utils.database import (
     add_nonadmin_chat,
@@ -35,7 +35,8 @@ from AnieXEricaMusic.utils.inline.settings import (
 )
 from AnieXEricaMusic.utils.inline.start import private_panel
 from config import BANNED_USERS, OWNER_ID
-
+from AnieXEricaMusic.utils.formatters import get_readable_time
+from AnieXEricaMusic.utils import bot_sys_stats
 
 @app.on_message(
     filters.command(["settings", "setting"]) & filters.group & ~BANNED_USERS
@@ -78,8 +79,11 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
         await app.resolve_peer(OWNER_ID)
         OWNER = OWNER_ID
         buttons = private_panel(_)
+        served_chats = len(await get_served_chats())
+        served_users = len(await get_served_users())
+        UP, CPU, RAM, DISK = await bot_sys_stats()
         return await CallbackQuery.edit_message_text(
-            _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
+            _["start_2"].format(CallbackQuery.from_user.mention, app.mention, UP, DISK, CPU, RAM, served_users, served_chats),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
