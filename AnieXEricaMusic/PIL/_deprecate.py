@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import warnings
 
-from . import __version__
+from AnieXEricaMusic.PIL._version import __version__
 
 
 def deprecate(
