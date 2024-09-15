@@ -19,6 +19,18 @@ from AnieXEricaMusic.utils.database import (
 )
 from AnieXEricaMusic.utils.decorators.language import LanguageStart
 from AnieXEricaMusic.utils.formatters import get_readable_time
+from AnieXEricaMusic.utils import bot_sys_stats
+from config import BANNED_USERS
+from strings import get_string
+from AnieXEricaMusic.utils.database import get_served_chats, get_served_users, get_sudoers
+from AnieXEricaMusic.utils.database import (
+    add_served_chat,
+    add_served_user,
+    blacklisted_chats,
+    get_lang,
+    is_banned_user,
+    is_on_off,
+)
 from AnieXEricaMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
@@ -84,9 +96,12 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
+        served_chats = len(await get_served_chats())
+        served_users = len(await get_served_users())
+        UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_photo(
             photo=config.START_IMG_URL,
-            caption=_["start_2"].format(message.from_user.mention, app.mention),
+            caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM, served_users, served_chats),
             reply_markup=InlineKeyboardMarkup(out),
         )
         if await is_on_off(2):
