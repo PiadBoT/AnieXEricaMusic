@@ -4,7 +4,7 @@ from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 from AnieXEricaMusic import app
 
-@app.on_message(filters.command(["admins", "admin"]) & filters.private & ~BANNED_USERS)
+@app.on_message(filters.command(["admins", "admin"]) & ~BANNED_USERS)
 @LanguageStart
 async def admis(client, message: Message, _):
     # Retrieve user information
