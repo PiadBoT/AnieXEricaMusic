@@ -3,6 +3,9 @@ from AnieXEricaMusic.misc import SUDOERS
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 from AnieXEricaMusic import app
+from config import BANNED_USERS
+from strings import get_string
+
 
 @app.on_message(filters.command(["admins", "admin"]) & ~BANNED_USERS)
 @LanguageStart
