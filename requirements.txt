@@ -9,7 +9,7 @@ hachoir
 heroku3
 httpx[http2]
 motor
-git+https://github.com/PiadBoT/pil
+pillow==9.5.0
 psutil
 git+https://github.com/dghfhdgbxgbg/pytgcalls097
 pykeyboard
