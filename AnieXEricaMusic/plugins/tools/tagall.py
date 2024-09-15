@@ -30,14 +30,10 @@ async def tag_all_users(_, message):
         return
 
     if message.chat.id in SPAM_CHATS:
-        return await message.reply_text(
-            _["TAG_1"]
-        )
+        return await message.reply_text(_["TAG_1"])
     replied = message.reply_to_message
     if len(message.command) < 2 and not replied:
-        await message.reply_text(
-            _["TAG_2"]
-        )
+        await message.reply_text(_["TAG_2"])
         return
     if replied:
         usernum = 0
@@ -50,7 +46,7 @@ async def tag_all_users(_, message):
                 if m.user.is_deleted or m.user.is_bot:
                     continue
                 usernum += 1
-                usertxt += f"[{m.user.first_name}](tg://user?id={m.user.id})  "
+                usertxt += f"{m.user.mention}  "
                 if usernum == 7:
                     await replied.reply_text(
                         usertxt,
@@ -83,7 +79,7 @@ async def tag_all_users(_, message):
                 if m.user.is_deleted or m.user.is_bot:
                     continue
                 usernum += 1
-                usertxt += f"[{m.user.first_name}](tg://user?id={m.user.id})  "
+                usertxt += f"{m.user.mention}  "
                 if usernum == 7:
                     await app.send_message(
                         message.chat.id,
@@ -114,9 +110,7 @@ async def tag_all_admins(_, message):
         )
     replied = message.reply_to_message
     if len(message.command) < 2 and not replied:
-        await message.reply_text(
-            _["TAG_4"]
-        )
+        await message.reply_text(_["TAG_4"])
         return
     if replied:
         usernum = 0
@@ -131,7 +125,7 @@ async def tag_all_admins(_, message):
                 if m.user.is_deleted or m.user.is_bot:
                     continue
                 usernum += 1
-                usertxt += f"[{m.user.first_name}](tg://user?id={m.user.id})  "
+                usertxt += f"{m.user.mention} "
                 if usernum == 7:
                     await replied.reply_text(
                         usertxt,
@@ -165,7 +159,7 @@ async def tag_all_admins(_, message):
                 if m.user.is_deleted or m.user.is_bot:
                     continue
                 usernum += 1
-                usertxt += f"[{m.user.first_name}](tg://user?id={m.user.id})  "
+                usertxt += f"{m.user.mention} "
                 if usernum == 7:
                     await app.send_message(
                         message.chat.id,
@@ -205,9 +199,7 @@ async def admintag_with_reporting(client, message):
     ]
     if message.command[0] == "report":
         if from_user_id in admins:
-            return await message.reply_text(
-                _["TAG_5"]
-            )
+            return await message.reply_text(_["TAG_5"])
 
     if from_user_id in admins:
         return await tag_all_admins(client, message)
@@ -225,9 +217,7 @@ async def admintag_with_reporting(client, message):
         or reply_user_id == chat_id
         or (linked_chat and reply_user_id == linked_chat.id)
     ):
-        return await message.reply_text(
-            _["TAG_8"]
-        )
+        return await message.reply_text(_["TAG_8"])
 
     user_mention = reply.from_user.mention if reply.from_user else "the user"
     text = f"Reported {user_mention} to admins!."
