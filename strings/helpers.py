@@ -194,6 +194,7 @@ Here Is Admins Pannels cmds
 """
 HELP_18 = """
 Here Is UseFull Tools :
-
+<code>/tgm</code> = ᴜᴘʟᴏᴀᴅ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴘʜ.
+<code>/tr</code> = ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʀᴀɴsʟᴀᴛᴇ ɪᴛ
 
 """
