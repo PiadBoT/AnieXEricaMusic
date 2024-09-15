@@ -1,3 +1,4 @@
+
 import re
 from os import getenv
 
@@ -6,18 +7,18 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH", "")
+API_ID = int(getenv("API_ID", "6435225"))
+API_HASH = getenv("API_HASH", "4e984ea35f854762dcde906dce426c2d")
 
-BOT_TOKEN = getenv("BOT_TOKEN", "")
+BOT_TOKEN = getenv("BOT_TOKEN", "7067769184:AAG7Fj7X3LJ0lZFneSKs0312V_CbhfLFee0")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", "")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://IYIusic:P8QtOotbu7QrXVNI@iyiusic.dlxc3.mongodb.net/?retryWrites=true&w=majority&appName=IYIusic")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 
-LOGGER_ID = int(getenv("LOGGER_ID", -1001971806089))
+LOGGER_ID = int(getenv("LOGGER_ID",-1002092475236))
 
-OWNER_ID = int(getenv("OWNER_ID", 7045191057))
+OWNER_ID = int(getenv("OWNER_ID", 5810668543))
 
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
@@ -25,7 +26,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/AbhiModszYT/AnieXEricaMusic",
+    "https://github.com/PiadBoT/IYIusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
@@ -40,7 +41,7 @@ PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 25))
 TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", 5242880000))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 5242880000))
 
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION", "BQC6kfsAvhnR04ErG1WMWnmKoaoklAjBeuG_trj-J348ygus4eP0-bV1w4fDqAkfqFF82Fk5tHo5fV67Wd20wRPzwh12iTupUA2Nynivb34_V_R1fDJ-n1ga_oattdPQ3ENdP9mw1QWMug5LFX-PW9c3LhvpBpWkoKozUcXUYwk5vLUeEiDISAahrcZV5YQ8bdFmiPdDg8h8t6eXFGSmBSl3bamBn7MewvIoho26rqlsEaYhvKND8uEAJWX6sgN8H64TYkilGr-13_yNi5wj-FUVbxTdlf-fAXB2d9eGpg5UHJp5mmUHJmeZYNzdpyFSnq4tKedZwk0E6YyZUyhHTn8n5Dh6tQAAAAGZs7ltAA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
