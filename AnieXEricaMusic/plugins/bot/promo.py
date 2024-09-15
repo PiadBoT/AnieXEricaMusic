@@ -2,7 +2,7 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 from unidecode import unidecode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from TeamSuperBan import app
+from AnieXEricaMusic import app
 import random 
 
 
