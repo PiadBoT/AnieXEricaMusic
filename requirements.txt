@@ -13,7 +13,7 @@ git+https://github.com/PiadBoT/pil
 psutil
 git+https://github.com/dghfhdgbxgbg/pytgcalls097
 pykeyboard
-pyrogram==2.0.106
+git+https://github.com/KurimuzonAkuma/pyrogram@dev
 python-dotenv
 pyyaml
 requests
