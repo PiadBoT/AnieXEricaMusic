@@ -30,7 +30,7 @@ async def is_admin(chat_id, user_id):
     filters.command(["all", "allmention", "mentionall", "tagall"], prefixes=["/", "@"])
 )
 @language
-async def tag_all_users(_, message):
+async def tag_all_users(client, message: Message, _):
     admin = await is_admin(message.chat.id, message.from_user.id)
     if not admin:
         return
@@ -193,7 +193,7 @@ async def tag_all_admins(_, message):
     filters.command(["admin", "admins", "report"], prefixes=["/", "@"]) & filters.group
 )
 @language
-async def admintag_with_reporting(client, message):
+async def admintag_with_reporting(client, message: Message, _):
     if not message.from_user:
         return
     chat_id = message.chat.id
@@ -251,7 +251,7 @@ async def admintag_with_reporting(client, message):
     )
 )
 @language
-async def cancelcmd(_, message):
+async def cancelcmd(client, message: Message, _):
     chat_id = message.chat.id
     admin = await is_admin(chat_id, message.from_user.id)
     if not admin:
