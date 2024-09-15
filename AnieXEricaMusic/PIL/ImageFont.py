@@ -33,9 +33,8 @@ import warnings
 from enum import IntEnum
 from io import BytesIO
 
-from . import Image
-from ._deprecate import deprecate
-from ._util import is_directory, is_path
+from AnieXEricaMusic.PIL._deprecate import deprecate
+from AnieXEricaMusic.PIL._util import is_directory, is_path
 
 
 class Layout(IntEnum):
