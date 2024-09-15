@@ -20,12 +20,10 @@ from AnieXEricaMusic.utils.inline import help_pannel, private_panel, start_panel
 @app.on_message(filters.command(["admins", "admin"]) & ~BANNED_USERS)
 @LanguageStart
 async def admis(client, message: Message, _):
-    # Retrieve user information
     sudo_users_info = []
     for user_id in SUDOERS:
         try:
             user = await client.get_users(user_id)
-            # Construct mention string using user.username or user.mention
             mention = user.mention or f"[@{user.username}](tg://user?id={user.id})"
             sudo_users_info.append(mention)
         except Exception as e:
@@ -34,8 +32,7 @@ async def admis(client, message: Message, _):
 
     if sudo_users_info:
         sudo_users_list = "\n".join(sudo_users_info)
-        response_message = f"The following users are Bot admins:\n{sudo_users_list}"
+        response_message = f"The following users are admins:\n{sudo_users_list}"
     else:
         response_message = "No admins found."
-    await message.reply_text(response_message, parse_mode="Markdown")
-
+    await message.reply_text(response_message)
