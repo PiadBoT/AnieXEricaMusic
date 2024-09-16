@@ -164,7 +164,6 @@ Nᴏᴛᴇ : Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ᴜsᴇ ᴛʜᴇ A�
 
 HELP_17 : """
 Here Is Admins Pannels cmds
-
 <code>/setpfp</code> ➠ set assis dp
 <code>/delpfp</code> ➠ delete assis dp
 <code>/setbio</code> ➠ set assis bio
