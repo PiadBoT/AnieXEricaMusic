@@ -1,9 +1,10 @@
 import math
-
+from pyrogram.types import InlineKeyboardMarkup, Message
 from pyrogram.types import InlineKeyboardButton
-
 from AnieXEricaMusic.utils.formatters import time_to_seconds
-
+from config import OWNER_ID, SUPPORT_CHAT
+from AnieXEricaMusic import app
+from strings import get_string, helpers
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
@@ -54,6 +55,12 @@ def stream_markup_timer(_, chat_id, played, dur):
         bar = "—————————◉"
     buttons = [
         [
+            InlineKeyboardButton(
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],
+        [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
@@ -61,10 +68,12 @@ def stream_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=f"{played} {bar} {dur}",
-                callback_data="GetTimer",
-            )
+                text=_["S_B_9"], url=f"{SUPPORT_CHAT}"
+            ),
+            InlineKeyboardButton(
+                text=_["S_B_5"], user_id=config.OWNER),
         ],
+        
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
