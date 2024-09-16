@@ -343,11 +343,7 @@ TAG_8 : "Do you know that the user you are replying to is an admin?"
 TAG_9 : "ᴛᴀɢɢɪɴɢ ᴘʀᴏᴄᴇss sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴏᴘᴘᴇᴅ!"
 TAG_10 : "ɴᴏ ᴘʀᴏᴄᴇss ᴏɴɢᴏɪɴɢ!"
 
-HELP_18 : """
-Here Is UseFull Tools 
-<code>/tgm</code> ➠ ᴜᴘʟᴏᴀᴅ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴘʜ.
-<code>/tr</code> ➠ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʀᴀɴsʟᴀᴛᴇ ɪᴛ
-"""
+HELP_18 : "Here Is UseFull Tools\n<code>/tgm</code> ➠ ᴜᴘʟᴏᴀᴅ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴘʜ.\n<code>/tr</code> ➠ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʀᴀɴsʟᴀᴛᴇ ɪᴛ."
 
 
 
