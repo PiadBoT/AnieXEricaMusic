@@ -1,5 +1,7 @@
 from typing import Union
-
+from pyrogram.types import InlineKeyboardButton
+import config
+from AnieXEricaMusic import app
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
@@ -70,6 +72,13 @@ def aq_markup(_, chat_id):
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text=_["S_B_9"], url=config.SUPPORT_CHAT),
+        ],
+         [
+            InlineKeyboardButton(text=_["ST_B_3"], callback_data="LG")
         ],
         [
             InlineKeyboardButton(
